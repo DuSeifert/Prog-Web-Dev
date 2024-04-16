@@ -149,3 +149,5 @@ function imprimir(tipo){
     }
     console.log(vet);
 }
+
+//ola eu acabei de mudar isso:)
