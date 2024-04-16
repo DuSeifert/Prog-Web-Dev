@@ -17,9 +17,9 @@ function addPilha(){
     }
 
     vet.push(item.value);
-    item.value = '';
 
     //zera o campo de input
+    item.value = '';
     document.getElementById('nome').value = '';
 
     //atualiza a impressão da pilha
