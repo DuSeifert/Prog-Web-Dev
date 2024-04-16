@@ -1,0 +1,79 @@
+body{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    
+}
+
+table{
+    position: absolute;
+    top: 16%;
+    left: 30%;
+    font-size: 14px;
+    border-collapse: separate;
+    background-color: rgb(215, 215, 215);
+    margin-top: 10px;
+}
+
+table tr{
+    text-align: justify;
+}
+
+table tr th{
+    background-color: #027bff;
+    color: white;
+    height: 28px;
+    padding-left: 5px;
+}
+
+
+table #li1{
+    background-color: white;
+}
+
+table #li2{
+    background-color: #f2f2f2;
+}
+
+table tr td{
+    height: 34px;
+    padding-left: 5px;
+}
+
+#horario{
+    width: 131px;
+}
+
+#titulo{
+    width: 224px;
+}
+
+#palestrante{
+    width: 160px;
+}
+
+#acao{
+    width: 200px;
+}
+
+a #box{
+    background-color: #4caf50;
+    color: white;
+    height: 23px;
+    width: 125px;
+    border-radius: 5px;
+    padding: 2px 5px;
+    text-align: center;
+    
+}
+
+a #box p{
+    margin-top: 3px;
+}

@@ -1,0 +1,163 @@
+body{
+    background-color: #6e5c62;
+    color: #fafaff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cab{
+    display: flex;
+    justify-content: center;
+}
+
+.topo{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.mini{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 20px;
+    border: 2px solid rgb(162, 151, 157);
+    border-radius: 3px;
+    color: rgb(162, 151, 157);
+    background-color: rgb(110, 92, 98);
+    font-size: large;
+}
+
+.head{
+    margin-top: -13px;
+    padding-bottom: 40px;
+    text-align: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: 900;
+    margin-left: 220px;
+    margin-right: 220px;
+}
+
+#tab1{
+    justify-content: center;
+    display: flex;
+}
+
+.linha-bloco{
+    justify-content: center;
+    display: flex;
+}
+
+#LinhaF{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(58, 163, 148);
+}
+
+#Linha1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(49, 42, 44);
+}
+
+#LinhaA{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(211, 173, 105);
+}
+
+#LinhaS{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6e5c62;
+    height: 48px;
+    width: 48px;
+    border-radius: 5px;
+    border: 4px solid #4c4347;
+    margin: 2px;
+}
+
+.bloco{
+    background-color: #615458;
+    height: 53px;
+    width: 56px;
+    margin: 2px;
+    border-radius: 5px;
+    font-size: 36px;
+    font-weight: 800;
+    padding-bottom: 3px;
+}
+
+#tab2{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.linha{
+    display: flex;
+    justify-content: center;
+}
+
+#l2{
+    margin-left: 55px;
+}
+
+#l3{
+    margin-left: 89px;
+}
+
+.letra{
+    background-color: #4c4347;
+    color: #fafaff;
+    height: 50px;
+    width: 57px;
+    margin: 4px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#backspace{
+    margin-left: 30px;
+    padding-bottom: 6px;
+    height: 44px;
+}
+
+.enter{
+    background-color: #4c4347;
+    color: #fafaff;
+    height: 50px;
+    width: 167px;
+    margin: 3px;
+    margin-left: 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#select{
+    background-color: rgb(89, 75, 79);
+    color: rgb(110, 92, 98);
+}
+
+#F{
+    background-color: rgb(58, 163, 148);
+}
+
+#S{
+    background-color: rgb(211, 173, 105);
+}

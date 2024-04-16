@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width=initial">
+        <title>Minha página</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <header>
+            <a href="Menu.html">
+                <button class="menu">Voltar ao Menu</button>
+            </a>
+        </header>
+
+        <div class="corpo">
+            <h1>LISTA</h1>
+
+            <div class="entrada">
+                <input type="text" id="nome" placeholder="Insira um item:" >
+                <input type="number" id="pos" placeholder="Posição">
+            </div>
+
+            <div class="botoes">
+                <button class="addrem" onclick="addLista()">Adicionar</button>
+                <button class="addrem" onclick="remLista()">Remover</button>
+            </div>
+
+            <hr>
+
+            <div id="mostra">
+                <h2>Vazio</h2>
+            </div>
+        </div>
+        
+        <script src="script.js"></script>
+    </body>
+
+</html>

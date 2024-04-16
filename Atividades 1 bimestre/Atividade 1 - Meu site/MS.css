@@ -1,0 +1,72 @@
+/*CSS externo*/
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(50, 50, 50);
+}
+
+header{
+    background-color: darkslategrey;
+    color: white;
+    padding: 10px;
+    padding-left: 30px;
+    text-align: center;
+}
+
+header img{
+    height: 50px;
+    width: 50px;
+}
+
+main{
+    color: white;
+    text-align: center;
+}
+
+#espaço{
+    padding: 7px;
+}
+
+main h3 a img{
+    height: 100px;
+    width: 100px;
+    padding: 30px;
+}
+
+#fotinho{
+    height: 50px;
+    width: 50px;
+    padding: 10px;
+}
+
+#pog{
+    height: 500px;
+    width: 1530px;
+    
+}
+
+nav{
+    text-align: center;
+    background-color: lightgray;
+    padding: 10px;
+
+}
+
+#cachorro{
+    height: 600px;
+    width: 800px;
+    padding-left: 340px;
+}
+
+nav a{
+    color: red;
+    margin-right: 50px;
+}
+
+footer{
+    color: white;
+    background-color: green;
+    padding: 5px;
+
+}

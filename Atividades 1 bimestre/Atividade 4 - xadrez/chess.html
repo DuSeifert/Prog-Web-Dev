@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width=initial">
+        <title>Minha página</title>
+        <link rel="stylesheet" href="chess.css">
+    </head>
+    <body>
+
+        <table id="tabuleiro">
+            <tr class="linha" id="l1">
+                <td class="claro"><img class="inv" src="Imagens/Chess_rook.png"></td>
+                <td class="escur" id="move1"></td>
+                <td class="claro"><img class="inv" src="Imagens/Chess_bishop.png"></td>
+                <td class="escur"><img class="inv" src="Imagens/Chess_queen.png"></td>
+                <td class="claro"><img class="inv" src="Imagens/Chess_king.png"></td>
+                <td class="escur"><img class="inv" src="Imagens/Chess_bishop.png"></td>
+                <td class="claro"><img class="inv" src="Imagens/Chess_knight.png"></td>
+                <td class="escur"><img class="inv" src="Imagens/Chess_rook.png"></td>
+            </tr>
+
+            <tr class="linha" id="l2">
+                <td class="escur"><img class="inv" src="Imagens/Chess.pawn.png"></td>
+                <td class="claro"><img class="inv" src="Imagens/Chess.pawn.png"></td>
+                <td class="escur"></td>
+                <td class="claro"><img class="inv" src="Imagens/Chess.pawn.png"></td>
+                <td class="escur"><img class="inv" src="Imagens/Chess.pawn.png"></td>
+                <td class="claro"><img class="inv" src="Imagens/Chess.pawn.png"></td>
+                <td class="escur"></td>
+                <td class="claro"><img class="inv" src="Imagens/Chess.pawn.png"></td>
+            </tr>
+
+            <tr class="linha" id="l3">
+                <td class="claro"></td>
+                <td class="escur"></td>
+                <td class="claro" id="move2"><img class="inv" src="Imagens/Chess_knight.png"></td>
+                <td class="escur"></td>
+                <td class="claro"></td>
+                <td class="escur"></td>
+                <td class="claro"><img class="inv" src="Imagens/Chess.pawn.png"></td>
+                <td class="escur"></td>
+            </tr>
+
+            <tr class="linha" id="l4">
+                <td class="escur"></td>
+                <td class="claro"></td>
+                <td class="escur"><img class="inv" src="Imagens/Chess.pawn.png"></td>
+                <td class="claro"></td>
+                <td class="escur"></td>
+                <td class="claro"></td>
+                <td class="escur"></td>
+                <td class="claro"></td>
+            </tr>
+
+            <tr class="linha" id="l5">
+                <td class="claro"></td>
+                <td class="escur"></td>
+                <td class="claro"><img src="Imagens/Chess_bishop.png"></td>
+                <td class="escur"><a onclick="volta()"><img id="p2" src="Imagens/Chess.pawn.png"></a></td>
+                <td class="claro"><img src="Imagens/Chess.pawn.png"></td>
+                <td class="escur"></td>
+                <td class="claro"></td>
+                <td class="escur"></td>
+            </tr>
+
+            <tr class="linha" id="l6">
+                <td class="escur"></td>
+                <td class="claro"></td>
+                <td class="escur"></td>
+                <td class="claro"></td>
+                <td class="escur"></td>
+                <td class="claro"><img src="Imagens/Chess_knight.png"></td>
+                <td class="escur"></td>
+                <td class="claro"></td>
+            </tr>
+
+            <tr class="linha" id="l7">
+                <td class="claro"><img src="Imagens/Chess.pawn.png"></td>
+                <td class="escur"><img src="Imagens/Chess.pawn.png"></td>
+                <td class="claro"><img src="Imagens/Chess.pawn.png"></td>
+                <td class="escur"><a onclick="some()"><img id="p1" src="Imagens/Chess.pawn.png"></a></td>
+                <td class="claro"></td>
+                <td class="escur"><img src="Imagens/Chess.pawn.png"></td>
+                <td class="claro"><img src="Imagens/Chess.pawn.png"></td>
+                <td class="escur"><img src="Imagens/Chess.pawn.png"></td>
+            </tr>
+
+            <tr class="linha" id="l8">
+                <td class="escur"><img src="Imagens/Chess_rook.png"></td>
+                <td class="claro"><img src="Imagens/Chess_knight.png"></td>
+                <td class="escur"><img src="Imagens/Chess_bishop.png"></td>
+                <td class="claro"><img src="Imagens/Chess_queen.png"></td>
+                <td class="escur"><img src="Imagens/Chess_king.png"></td>
+                <td class="claro"></td>
+                <td class="escur"></td>
+                <td class="claro"><img src="Imagens/Chess_rook.png"></td>
+            </tr>
+        </table>
+        
+        <script src="chess.js"></script>
+    </body>
+
+</html>

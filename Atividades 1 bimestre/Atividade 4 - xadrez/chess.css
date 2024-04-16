@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 35, 35);
+}
+
+#tabuleiro{
+    padding-top: 30px;
+}
+
+.claro{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(240, 217, 181);
+}
+
+.escur{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(181, 136, 99);
+}
+
+img{
+    height: 70px;
+    width: 70px;
+    padding-left: 6%;
+    padding-top: 6%;
+    transition: 200ms;
+}
+
+img:hover{
+    transition: 200ms;
+    filter: invert(25%);
+}
+
+.inv{
+    filter: invert(1);
+}
+
+.inv:hover{
+    transition: 200ms;
+    filter: invert(75%);
+}
+
+#move1{
+    background-color: rgb(205, 210, 106);
+}
+
+#move2{
+    background-color: rgb(170, 162, 58);
+}
+
+:root{
+    --x: 1;
+    --y: 0;
+}
+
+#p1{
+    opacity: var(--x);
+    transition: 200ms;
+}
+
+#p2{
+    opacity: var(--y);
+    transition: 200ms;
+}
