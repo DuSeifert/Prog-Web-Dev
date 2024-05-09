@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculadora de área</title>
+		<link rel="stylesheet" href="q2.css" />
+	</head>
+	<body>
+		<div class="corpo"><br>
+			<h1>Calculadora para Pedreiros</h1>
+			<label for="lado">Comprimento do Lado:</label>
+			<input type="number" id="lado" min="0" step="any" /> <br /><br />
+
+			<label for="opcao">Escolha o que calcular:</label>
+			<select id="opcao">
+				<option value="area">Área</option>
+				<option value="perimetro">Perímetro</option>
+			</select>
+			<br /><br />
+
+			<button id="calc">Calcular</button><br /><br />
+			<div id="resultado">
+				<p id="mostra"></p>
+			</div>
+		</div>
+		<script src="q2.js"></script>
+	</body>
+</html>

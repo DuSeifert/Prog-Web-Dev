@@ -1,0 +1,42 @@
+<!-- calculadora simples (soma e subtração apenas)-->
+
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width=initial">
+        <title>Minha página</title>
+        <link rel="stylesheet" href="q2estilo.css">
+    </head>
+    <body>
+
+        <div id="corpo">
+            <input type="text" id="tela" >
+
+            <div id="tecla">
+                <button onclick="somSub('+')">+</button>
+                <button onclick="somSub('-')">-</button>
+                <button onclick="calcula()">=</button>
+            </div>
+
+            <div id="num">
+                <button onclick="somSub('7')">7</button>
+                <button onclick="somSub('8')">8</button>
+                <button onclick="somSub('9')">9</button>
+                <button onclick="somSub('4')">4</button>
+                <button onclick="somSub('5')">5</button>
+                <button onclick="somSub('6')">6</button>
+                <button onclick="somSub('1')">1</button>
+                <button onclick="somSub('2')">2</button>
+                <button onclick="somSub('3')">3</button>
+                <button onclick="somSub('0')">0</button>
+                <button onclick="somSub('.')">.</button>
+                <button onclick="limpaTela()">C</button>
+            </div>
+
+        </div>
+
+        <script src="q2script.js"></script>
+    </body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width=device-width=initial">
+        <title>Minha página</title>
+        <link rel="stylesheet" href="q3estilo.css">
+    </head>
+    <body>            
+            <form id="corpo">
+
+                <h1>Formulário restaurante</h1>
+
+                <div class="entrada">
+                    <div class="lab">
+                        <label>Nome</label>
+                    </div>
+                    <input placeholder="Cleverson" type="text" id="nome">
+                </div>
+
+                <div class="entrada">
+                    <div class="lab">
+                        <label>Contato</label>
+                    </div>
+                    <input placeholder="44 99244-2533" type="tel" id="contato">
+                </div>
+
+                <div class="entrada">
+                    <div class="lab">
+                        <label>Email</label>
+                    </div>
+                    <input placeholder="cleverson@gamil.com" type="email" id="nome">
+                </div>
+            
+                <div class="entrada">
+                    <select id="opt" pla>
+                        <option value="folhas">Folhas</option>
+                        <option value="massa">Massa</option>
+                        <option value="carne">Carne</option>
+                        <option value="veg">Vegetariano</option>
+                    </select>
+                </div>
+
+                <button id="envia" onclick="confirmar()">Enviar dados</button>
+
+            </form>            
+        <script src="q3script.js"></script>
+    </body>
+
+</html>

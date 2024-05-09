@@ -1,0 +1,9 @@
+q1
+
+    Para organizar um menu de navegação utilizando tags <div> e <a>, eu utilizaria a tag 
+    <nav>, que é uma div feita para criar barras de navegação, dentro dessa <nav> eu
+    utilizaria tags <a> com botões dentro que referenciariam outros arquivos HTML, assim, 
+    clicando em qualquer botão iria te direcionar para outras abas do site.
+
+    Em questão de estilização, barras de navegação são normalmente colocadas abaixo do
+    título do site, são finas, porém tem o comprimento da tela inteira. 

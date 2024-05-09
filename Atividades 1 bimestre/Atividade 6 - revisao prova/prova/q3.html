@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Reservar laboratórios</title>
+		<link rel="stylesheet" href="q3.css">
+	</head>
+	<body>
+        <br><br>
+		<form class="corpo">
+			<h1>Reserva de salas de aula</h1>
+			<label>Nome do professor:</label>
+			<input placeholder="Joremias" type="text" id="nome"><br><br>
+			
+            <label>Contato:</label>
+			<input placeholder="44 xxxxx-xxxx" type="text" id="contato"><br><br>
+			
+            <label>Quantidade de alunos:</label>
+			<input placeholder="4" type="number" id="qa"><br><br>
+			
+            <label>Disciplina:</label>
+			<input placeholder="Criação de vasos 104" type="text" id="disciplina"><br><br>
+			
+            <label>Desejo projetor?</label>
+			<select id="projetor">
+				<option value="sim">Sim</option>
+				<option value="nao">Não</option>
+			</select>
+
+			<button id="reserva">Reservar</button><br><br>
+		</form>
+        
+		<script src="q3.js"></script>
+	</body>
+</html>

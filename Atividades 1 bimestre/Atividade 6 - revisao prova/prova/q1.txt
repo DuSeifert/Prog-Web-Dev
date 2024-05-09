@@ -1,0 +1,25 @@
+Eu iria usar a tag <nav>, que é feita para criar uma barra de navegação em baixo do título da página,
+essa tag cria uma <div>, que normalmente é muito fina, mas tem o comprimento d página inteira, dentro
+dessa <nav> eu iria criar outras <div> para armazenar um botão dentro de um link, ex:
+
+<nav>
+    <div class="links">
+        <a href="link1.html">
+            <button>Link1</button>
+        </a>
+    </div>
+    <div class="links">
+        <a href="link2.html">
+            <button>Link2</button>
+        </a>
+    </div>
+    <div class="links">
+        <a href="link3.html">
+            <button>Link3</button>
+    </a>
+    </div>
+</nav>
+
+para o CSS, eu iria utilizar as funções display: flex; e width: 20%; para deixar os botões em uma linha, e
+modificar o tamanho para algo regular, além de mudar a cor do fundo e do texto para combinar com as
+cores originais do site.
