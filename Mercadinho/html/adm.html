@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/estilo.css" />
+		<title>Página do adm</title>
+	</head>
+	<body>
+        <nav class="navbar">
+            <a href="home.html"><img class="navImg" src="../Fotos/Logo.png" alt="Cyphers logo"></a>
+            <a href="menu.html"><button class="navBut">Menu</button></a>
+            <a href="carrinho.html" id="linkCart"><button class="navBut" id="cartBut"><img src="../Fotos/shopping-cart.png" alt="Carrinho de compras" id="cart"><div id="mostra"></div></button></a>
+        </nav>
+
+        <div id="cadastro">
+            <h1>Cadastrar produto</h1>
+
+            <input type="text" class="admInput" id="item" placeholder="Item" />
+		    <input type="number" class="admInput" id="preco" placeholder="Preço" />
+            <input type="text" class="admInput" id="descricao" placeholder="Uma descrição curta do item">
+
+		    <button id="admAdd" onclick="addItem()">Adicionar</button>
+        </div>
+
+		
+		<br /><br />
+        <table id="cabecalho">
+            <tr>
+                <th id="thnome" >Nome</th>
+                <th id="thpreco" >Preço</th>
+                <th id="thdescr" >Descrição</th>
+                <th id="thacoes" >Ações</th>
+            </tr>
+        </table>
+
+		<div id="lista"></div>
+
+            
+		<script src="../js/adm.js"></script>
+	</body>
+</html>
