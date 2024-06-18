@@ -57,7 +57,7 @@
             var tabela = document.getElementById('tabela');
             tabela.innerHTML = '';
 
-            if(vet.length === 0){
+            if(!vet || vet.length === 0){
                 let tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td>Sem filmes :(</td>    
