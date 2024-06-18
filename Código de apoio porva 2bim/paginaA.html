@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Adicionar Filme</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+			crossorigin="anonymous"
+		/>
+		<style>
+			body {
+				padding: 20px;
+			}
+			form {
+				max-width: 400px;
+				margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="text-center">Adicionar Filme</h1>
+			<div id="movieForm">
+				<div class="form-group">
+					<label for="title">Título:</label>
+					<input
+						type="text"
+						class="form-control"
+						id="title"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="director">Diretor:</label>
+					<input
+						type="text"
+						class="form-control"
+						id="director"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="year">Ano de Lançamento:</label>
+					<input
+						type="number"
+						class="form-control"
+						id="year"
+					/>
+				</div>
+				<div class="form-group">
+					<label for="genre">Gênero:</label>
+					<input
+						type="text"
+						class="form-control"
+						id="genre"
+					/>
+				</div>
+				<button onclick="defObjeto()" class="btn btn-primary">
+					Adicionar Filme
+				</button>
+			</div>
+		</div>
+		<div class="container">
+			<p>
+				<a
+					href="paginaB.html"
+					class="link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+					>Catalálogo de filmes</a
+				>
+			</p>
+		</div>
+
+		<script>
+			let titulo = document.getElementById('title');
+			let diretor = document.getElementById('director');
+			let data = document.getElementById('year');
+			let genero = document.getElementById('genre');
+
+			function defObjeto(){
+				const obj = {
+					titulo: titulo.value,
+					diretor: diretor.value,
+					data: data.value,
+					genero: genero.value
+				};
+
+				adicionar(obj);
+			}
+
+			function adicionar(obj){
+				var lista = JSON.parse(localStorage.getItem('listaFilmes'));
+			
+				if(lista){
+					lista.push(obj);
+				}
+				else{
+					lista = [obj];
+				}
+
+				localStorage.setItem('listaFilmes', JSON.stringify(lista));
+				
+				titulo.value = '';
+				diretor.value = '';
+				data.value = '';
+				genero.value = '';
+
+				console.log(lista);
+				alert(`'${obj.titulo}' adicionado a lista`);
+			}
+		</script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

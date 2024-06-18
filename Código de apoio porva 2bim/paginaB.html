@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina B</title>
+    <style>
+        #edit{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Filmes</h1>
+
+    <table id="cabecalho">
+        <tr>
+            <th>Título</th>
+            <th>Diretor</th>
+            <th>Lançamento</th>
+            <th>Gênero</th>
+            <th>Ações</th>
+        </tr>
+    </table>
+
+    <table id="tabela"></table>
+    <br><br>
+
+    <a href="paginaA.html">
+        <button id="adicionar">Adicionar mais filmes</button>
+    </a>
+
+    <br><br>
+    <br><br>
+    <div id="edit">
+        <input type="text" id="titulo" placeholder="Título">
+        <input type="text" id="diretor" placeholder="Diretor">
+        <input type="number" id="data" placeholder="Data de lançamento">
+        <input type="text" id="genero" placeholder="Gênero">
+
+        <button id="editBtn">Editar</button>
+        <button id="cancela">Cancelar</button>
+    </div>
+
+
+
+    <script>
+        atualizar();
+        function atualizar(){
+            const stringJson = localStorage.getItem('listaFilmes');
+            const vet = JSON.parse(stringJson);
+
+            imprimir(vet);
+        }
+
+        function imprimir(vet){
+            var tabela = document.getElementById('tabela');
+            tabela.innerHTML = '';
+
+            if(vet.length === 0){
+                let tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>Sem filmes :(</td>    
+                `;
+                tabela.appendChild(tr);
+            }
+            else{
+                for(let i=0 ; i<vet.length ; i++){
+                    let obj = vet[i];
+
+                    let tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td id="pnome">${obj.titulo}</td>
+                        <td id="pdiretor">${obj.diretor}</td>
+                        <td id="pano">${obj.data}</td>
+                        <td id="pgenero">${obj.genero}</td>
+                        <td id="pacoes">
+                            <button id="editRem" onclick='editar(${i})'>Editar</button> 
+                            <button id="editRem" onclick='remover(${i})'>Remover</button>
+                        </td>
+                    `;
+                    
+                    tabela.appendChild(tr);
+                }
+                console.log(vet);
+            }
+        }
+
+        function remover(indice){
+            let vet = JSON.parse(localStorage.getItem('listaFilmes'));
+
+            if(confirm(`Deseja excluir o filme ${vet[indice].titulo} da lista?`)){
+                vet.splice(indice, 1);
+                localStorage.removeItem('listaFilmes');
+
+                localStorage.setItem('listaFilmes', JSON.stringify(vet));
+                atualizar();
+            }
+        }
+
+        function editar(indice){
+            document.getElementById('edit').style.display = "contents";
+
+            let edit = JSON.parse(localStorage.getItem('listaFilmes'));
+
+            let titulo = document.getElementById('titulo');
+            let diretor = document.getElementById('diretor');
+            let data = document.getElementById('data');
+            let genero = document.getElementById('genero');
+           
+            titulo.value = edit[indice].titulo;
+            diretor.value = edit[indice].diretor;
+            data.value = edit[indice].data;
+            genero.value = edit[indice].genero;
+
+            document.getElementById('editBtn').addEventListener("click", function(){
+                if(confirm(`Confirmar edição`)){
+                    edit.splice(indice, 1);
+                    localStorage.removeItem('listaFilmes');
+
+                    localStorage.setItem('listaFilmes', JSON.stringify(edit));
+
+                    const obj = {
+                        titulo: titulo.value,
+					    diretor: diretor.value,
+					    data: data.value,
+					    genero: genero.value
+                    }
+
+                    adicionar(obj);
+                }
+
+                titulo.value = '';
+                diretor.value = '';
+                data.value = '';
+                genero.value = '';
+
+                document.getElementById('edit').style.display = "none";
+                atualizar();
+            });
+
+            document.getElementById('cancela').addEventListener('click', function(){
+                titulo.value = '';
+                diretor.value = '';
+                data.value = '';
+                genero.value = '';
+
+                document.getElementById('edit').style.display = "none";
+            });
+        }
+
+        function adicionar(obj){
+				var lista = JSON.parse(localStorage.getItem('listaFilmes'));
+			
+				if(lista){
+					lista.push(obj);
+				}
+				else{
+					lista = [obj];
+				}
+
+				localStorage.setItem('listaFilmes', JSON.stringify(lista));
+				
+				console.log(lista);
+				alert(`Filme editado com sucesso`);
+
+                atualizar();
+			}
+
+    </script>
+</body>
+</html>

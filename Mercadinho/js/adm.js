@@ -43,17 +43,17 @@ function imprimir(vet) {
         for(let i=0 ; i<vet.length ; i++){
             let obj = vet[i];
 
-		let p = document.createElement("div");
-		p.innerHTML = `
-            <p id="pnome" >${obj.item}</p>
-            <p id="ppreco" >${obj.preco}</p>
-            <p id="pdescr" >${obj.descr}</p>
-            <p id="pacoes" >
-                <button class="acaoBut" onclick = 'editar(${i})'>Editar</button>         
-                <button class="acaoBut" onclick = 'remover(${i})'>Remover</button>         
-            </p>
-        `;
-		lista.appendChild(p);
+		    let p = document.createElement("div");
+		    p.innerHTML = `
+                <p id="pnome" >${obj.item}</p>
+                <p id="ppreco" >${obj.preco}</p>
+                <p id="pdescr" >${obj.descr}</p>
+                <p id="pacoes" >
+                    <button class="acaoBut" onclick = 'editar(${i})'>Editar</button>         
+                    <button class="acaoBut" onclick = 'remover(${i})'>Remover</button>         
+                </p>
+            `;
+		    lista.appendChild(p);
         }
     }
     else{
